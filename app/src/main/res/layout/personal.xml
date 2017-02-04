@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/personal"
+    android:background="#e7e5e5"
+    >
+    <ScrollView
+        android:id="@+id/personal_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        >
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#fff">
+        <ImageView
+            android:id="@+id/i_userpic"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:src="@drawable/a"/>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/t_name"
+            android:layout_toRightOf="@+id/i_userpic"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            >
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_centerHorizontal="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/t_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Gender:"
+            style="bold"
+            android:textSize="20sp"
+            android:layout_below="@+id/i_userpic"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/i_userpic"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/t_gender"
+            android:scrollbars="vertical"
+            >
+            <RadioButton
+                android:id="@+id/btn_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textSize="12dp"
+                android:layout_marginLeft="15dp"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="12dp"
+                android:id="@+id/btn_female"
+                android:layout_marginLeft="15dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Others"
+                android:textSize="12dp"
+                android:id="@+id/btn_other"
+                android:layout_marginLeft="15dp"/>
+
+        </RadioGroup>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/t_email"
+            android:layout_below="@+id/t_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_centerHorizontal="true"
+            >
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_centerHorizontal="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/t_phone"
+            android:layout_below="@+id/t_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_centerHorizontal="true"
+            >
+
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_centerHorizontal="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/t_address"
+            android:layout_below="@+id/t_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_centerHorizontal="true"
+            >
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/adress"
+                android:singleLine="true"
+                android:layout_centerHorizontal="true"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/t_city"
+            android:layout_below="@+id/t_address"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            >
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="City"
+                android:singleLine="true"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/spin_state"
+            android:layout_below="@+id/t_address"
+            android:layout_width="175dp"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/t_city"
+            android:prompt="@string/state"
+            android:entries="@array/state_arrays">
+
+        </Spinner>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/t_pin"
+            android:layout_below="@+id/t_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            >
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Postal Code"
+                android:singleLine="true"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:background="#b72027"
+            android:text="SUBMIT"
+            android:id="@+id/btn_signup"
+            android:padding="2dp"
+            android:textColor="@android:color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/t_pin"
+            android:layout_marginTop="13dp"/>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>
